@@ -64,6 +64,82 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/10/26/JavaScript/" class="article-date">
+  <time datetime="2021-10-25T16:28:29.000Z" itemprop="datePublished">2021-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/10/26/JavaScript/">JavaScript-simple</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、操作属性的方法："><a href="#一、操作属性的方法：" class="headerlink" title="一、操作属性的方法："></a>一、操作属性的方法：</h3><p>① .符；</p>
+<p>② [ ]使用方括号。如oTxt[‘value’]=’aaa’。</p>
+<h3 id="二、style和classname"><a href="#二、style和classname" class="headerlink" title="二、style和classname"></a>二、style和classname</h3><p> Style操作的是行间样式，即只是作为标签的属性，对某一个标签进行了修改</p>
+<p>注意：样式的优先级：* &lt; 标签 &lt; class &lt; ID &lt; 行间</p>
+<p>对于同一个元素，不要用多种操作其样式</p>
+<h3 id="三、提取行间事件"><a href="#三、提取行间事件" class="headerlink" title="三、提取行间事件"></a>三、提取行间事件</h3><h4 id="①为元素添加事件"><a href="#①为元素添加事件" class="headerlink" title="①为元素添加事件"></a>①为元素添加事件</h4><p>  写函数或者写个匿名函数直接接在要用的地方（如下示例）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">​     <span class="keyword">var</span> temp = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;account&#x27;</span>);</span><br><span class="line"></span><br><span class="line">​   temp.onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)//匿名函数</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">​    </span>&#123;</span><br><span class="line"></span><br><span class="line">​      alert(<span class="string">&quot;hhha&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="②-window-onload-a在整个页面加载完成之后，执行window-onload的代码"><a href="#②-window-onload-a在整个页面加载完成之后，执行window-onload的代码" class="headerlink" title="② window.onload -à在整个页面加载完成之后，执行window.onload的代码"></a>② window.onload -à在整个页面加载完成之后，执行window.onload的代码</h4><h4 id="③-获取一组元素："><a href="#③-获取一组元素：" class="headerlink" title="③ 获取一组元素："></a>③ 获取一组元素：</h4><p>getElementsByTagName</p>
+<p>//通过标签获取一系列元素</p>
+<h3 id="JS简易年历制作"><a href="#JS简易年历制作" class="headerlink" title="JS简易年历制作"></a>JS简易年历制作</h3><p>使用innerHTML</p>
+<p>相当于向一个标签中嵌入HTML，如可以向<div>标签中嵌入一个HTML</p>
+<h3 id="四、"><a href="#四、" class="headerlink" title="四、"></a>四、</h3><p>ECMA</p>
+<p>DOM（document object model）</p>
+<p>BOM（browser object model）</p>
+<p>NaN（not a number）</p>
+<p>变量类型转换函数：</p>
+<p>常用：</p>
+<p>① parseInt（string s）;字符串转换为整数，或者直接提取字符串最开始的数字，直至遇见字母。</p>
+<p>② isNaN（）；判断变量是否是NaN；</p>
+<p>③ parseFloat（string s）；字符串转换为浮点数</p>
+<h3 id="五、-和-的比较。前者是先转换类型再比较，后者不转换类型直接比较"><a href="#五、-和-的比较。前者是先转换类型再比较，后者不转换类型直接比较" class="headerlink" title="五、==和===的比较。前者是先转换类型再比较，后者不转换类型直接比较"></a>五、==和===的比较。前者是先转换类型再比较，后者不转换类型直接比较</h3><h3 id="六、Json：Json是一种轻量级的数据交换格式。"><a href="#六、Json：Json是一种轻量级的数据交换格式。" class="headerlink" title="六、Json：Json是一种轻量级的数据交换格式。"></a>六、Json：Json是一种轻量级的数据交换格式。</h3><p>获取内联样式和外联样式的style，使用getComputedStyle（）（只适用于Chrome和FireFox）</p>
+<p>var baccount = document.getElementById(“account”); </p>
+<p>​    alert(getComputedStyle(baccount).width);//获取账号输入框的宽度</p>
+<p>关于 <strong>getComputedStyle</strong> 的兼容性问题，在 Chrome 和 Firefox 是支持该属性的，同时 IE 9 10 11 也是支持相同的特性的，IE 8并不支持这个特性。 IE 8 支持的是 element.currentStyle 这个属性，这个属性返回的值和 <strong>getComputedStyle</strong> 的返回基本一致，只是在 float 的支持上，IE 8 支持的是 styleFloat。</p>
+<ul>
+<li>element.style     读取的只是元素的<strong>内联样式</strong>，即写在元素的 style     属性上的样式；而 getComputedStyle 读取的样式是最终样式，包括了<strong>内联样式</strong>、<strong>嵌入样式</strong>和<strong>外部样式</strong>。</li>
+<li>element.style     既支持读也支持写，我们通过 element.style 即可改写元素的样式。而 getComputedStyle 仅支持读并不支持写入。我们可以通过使用     getComputedStyle 读取样式，通过 element.style 修改样式</li>
+</ul>
+<h3 id="JS中设置数组array"><a href="#JS中设置数组array" class="headerlink" title="JS中设置数组array"></a>JS中设置数组array</h3><p>添加push（元素）：从尾部添加；unshift（）：从头部添加；</p>
+<p>删除pop（元素）：从尾部删除；shift（）：从头部删除</p>
+<p>插入、删除：①用于删除splice（起点、长度）；②用于插入：splice（起点、0、待插入元素）；③用于替换，和插入差不多，长度改变即可。</p>
+<p>数组连接： 数组名.concat（连接在后的数组）；</p>
+<p>数组排序：sort（）对字符串排序；</p>
+<h3 id="无缝滚动——基础"><a href="#无缝滚动——基础" class="headerlink" title="无缝滚动——基础"></a>无缝滚动——基础</h3><p>使用到offsetLeft和offsetTop等属性</p>
+<p>模糊搜索：可用search（）函数</p>
+<p>一个表格可以有多个tbodies，但是tfoot和thead只用一个。</p>
+<h3 id="七、JS运动基础"><a href="#七、JS运动基础" class="headerlink" title="七、JS运动基础"></a>七、JS运动基础</h3><p>缓冲运动从左向右简单示例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">startMove2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">​      <span class="keyword">var</span> oDiv2 = <span class="built_in">document</span>.getElementById(<span class="string">&quot;div2&quot;</span>);</span><br><span class="line"></span><br><span class="line">​      <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">var</span> speed2 = (<span class="number">300</span>-oDiv2.offsetLeft)/<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">​        speed2=<span class="built_in">Math</span>.ceil(speed2);</span><br><span class="line"></span><br><span class="line">​        oDiv2.style.left = oDiv2.offsetLeft+speed2+<span class="string">&#x27;px&#x27;</span>;</span><br><span class="line"></span><br><span class="line">​      &#125;,<span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="八、JavaScript中的闭包"><a href="#八、JavaScript中的闭包" class="headerlink" title="八、JavaScript中的闭包"></a>八、JavaScript中的闭包</h3><h3 id="九、多物体运动框架"><a href="#九、多物体运动框架" class="headerlink" title="九、多物体运动框架"></a>九、多物体运动框架</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/26/JavaScript/" data-id="ckv7didjz00007gvn0td5ctm2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-onlineFinance" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/10/26/onlineFinance/" class="article-date">
@@ -112,100 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/26/onlineFinance/" data-id="ckv7d9ype00017svnendab9tp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/10/25/JavaScript/" class="article-date">
-  <time datetime="2021-10-25T15:48:33.607Z" itemprop="datePublished">2021-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、操作属性的方法："><a href="#一、操作属性的方法：" class="headerlink" title="一、操作属性的方法："></a>一、操作属性的方法：</h3><p>① .符；</p>
-<p>② [ ]使用方括号。如oTxt[‘value’]=’aaa’。</p>
-<h3 id="二、style和classname"><a href="#二、style和classname" class="headerlink" title="二、style和classname"></a>二、style和classname</h3><p> Style操作的是行间样式，即只是作为标签的属性，对某一个标签进行了修改</p>
-<p>注意：样式的优先级：* &lt; 标签 &lt; class &lt; ID &lt; 行间</p>
-<p>对于同一个元素，不要用多种操作其样式</p>
-<h3 id="三、提取行间事件"><a href="#三、提取行间事件" class="headerlink" title="三、提取行间事件"></a>三、提取行间事件</h3><h4 id="①为元素添加事件"><a href="#①为元素添加事件" class="headerlink" title="①为元素添加事件"></a>①为元素添加事件</h4><p>  写函数或者写个匿名函数直接接在要用的地方（如下示例）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">​     <span class="keyword">var</span> temp = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;account&#x27;</span>);</span><br><span class="line"></span><br><span class="line">​   temp.onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)//匿名函数</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">​    </span>&#123;</span><br><span class="line"></span><br><span class="line">​      alert(<span class="string">&quot;hhha&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="②-window-onload-a在整个页面加载完成之后，执行window-onload的代码"><a href="#②-window-onload-a在整个页面加载完成之后，执行window-onload的代码" class="headerlink" title="② window.onload -à在整个页面加载完成之后，执行window.onload的代码"></a>② window.onload -à在整个页面加载完成之后，执行window.onload的代码</h4><h4 id="③-获取一组元素："><a href="#③-获取一组元素：" class="headerlink" title="③ 获取一组元素："></a>③ 获取一组元素：</h4><p>getElementsByTagName</p>
-<p>//通过标签获取一系列元素</p>
-<h3 id="JS简易年历制作"><a href="#JS简易年历制作" class="headerlink" title="JS简易年历制作"></a>JS简易年历制作</h3><p>使用innerHTML</p>
-<p>相当于向一个标签中嵌入HTML，如可以向<div>标签中嵌入一个HTML</p>
-<h3 id="四、"><a href="#四、" class="headerlink" title="四、"></a>四、</h3><p>ECMA</p>
-<p>DOM（document object model）</p>
-<p>BOM（browser object model）</p>
-<p>NaN（not a number）</p>
-<p>变量类型转换函数：</p>
-<p>常用：</p>
-<p>① parseInt（string s）;字符串转换为整数，或者直接提取字符串最开始的数字，直至遇见字母。</p>
-<p>② isNaN（）；判断变量是否是NaN；</p>
-<p>③ parseFloat（string s）；字符串转换为浮点数</p>
-<h3 id="五、-和-的比较。前者是先转换类型再比较，后者不转换类型直接比较"><a href="#五、-和-的比较。前者是先转换类型再比较，后者不转换类型直接比较" class="headerlink" title="五、==和===的比较。前者是先转换类型再比较，后者不转换类型直接比较"></a>五、==和===的比较。前者是先转换类型再比较，后者不转换类型直接比较</h3><h3 id="六、Json：Json是一种轻量级的数据交换格式。"><a href="#六、Json：Json是一种轻量级的数据交换格式。" class="headerlink" title="六、Json：Json是一种轻量级的数据交换格式。"></a>六、Json：Json是一种轻量级的数据交换格式。</h3><p>获取内联样式和外联样式的style，使用getComputedStyle（）（只适用于Chrome和FireFox）</p>
-<p>var baccount = document.getElementById(“account”); </p>
-<p>​    alert(getComputedStyle(baccount).width);//获取账号输入框的宽度</p>
-<p>关于 <strong>getComputedStyle</strong> 的兼容性问题，在 Chrome 和 Firefox 是支持该属性的，同时 IE 9 10 11 也是支持相同的特性的，IE 8并不支持这个特性。 IE 8 支持的是 element.currentStyle 这个属性，这个属性返回的值和 <strong>getComputedStyle</strong> 的返回基本一致，只是在 float 的支持上，IE 8 支持的是 styleFloat。</p>
-<ul>
-<li>element.style     读取的只是元素的<strong>内联样式</strong>，即写在元素的 style     属性上的样式；而 getComputedStyle 读取的样式是最终样式，包括了<strong>内联样式</strong>、<strong>嵌入样式</strong>和<strong>外部样式</strong>。</li>
-<li>element.style     既支持读也支持写，我们通过 element.style 即可改写元素的样式。而 getComputedStyle 仅支持读并不支持写入。我们可以通过使用     getComputedStyle 读取样式，通过 element.style 修改样式</li>
-</ul>
-<h3 id="JS中设置数组array"><a href="#JS中设置数组array" class="headerlink" title="JS中设置数组array"></a>JS中设置数组array</h3><p>添加push（元素）：从尾部添加；unshift（）：从头部添加；</p>
-<p>删除pop（元素）：从尾部删除；shift（）：从头部删除</p>
-<p>插入、删除：①用于删除splice（起点、长度）；②用于插入：splice（起点、0、待插入元素）；③用于替换，和插入差不多，长度改变即可。</p>
-<p>数组连接： 数组名.concat（连接在后的数组）；</p>
-<p>数组排序：sort（）对字符串排序；</p>
-<h3 id="无缝滚动——基础"><a href="#无缝滚动——基础" class="headerlink" title="无缝滚动——基础"></a>无缝滚动——基础</h3><p>使用到offsetLeft和offsetTop等属性</p>
-<p>模糊搜索：可用search（）函数</p>
-<p>一个表格可以有多个tbodies，但是tfoot和thead只用一个。</p>
-<h3 id="七、JS运动基础"><a href="#七、JS运动基础" class="headerlink" title="七、JS运动基础"></a>七、JS运动基础</h3><p>缓冲运动从左向右简单示例</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">startMove2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">​      <span class="keyword">var</span> oDiv2 = <span class="built_in">document</span>.getElementById(<span class="string">&quot;div2&quot;</span>);</span><br><span class="line"></span><br><span class="line">​      <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">var</span> speed2 = (<span class="number">300</span>-oDiv2.offsetLeft)/<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">​        speed2=<span class="built_in">Math</span>.ceil(speed2);</span><br><span class="line"></span><br><span class="line">​        oDiv2.style.left = oDiv2.offsetLeft+speed2+<span class="string">&#x27;px&#x27;</span>;</span><br><span class="line"></span><br><span class="line">​      &#125;,<span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="八、JavaScript中的闭包"><a href="#八、JavaScript中的闭包" class="headerlink" title="八、JavaScript中的闭包"></a>八、JavaScript中的闭包</h3><h3 id="九、多物体运动框架"><a href="#九、多物体运动框架" class="headerlink" title="九、多物体运动框架"></a>九、多物体运动框架</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/25/JavaScript/" data-id="ckv7d9ypa00007svneqy11l1i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ypp" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/10/13/ypp/" class="article-date">
-  <time datetime="2021-10-13T07:13:55.172Z" itemprop="datePublished">2021-10-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hello world！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/13/ypp/" data-id="ckv7d9ypg00027svnake5057z" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/10/26/onlineFinance/" data-id="ckv7didk300017gvn0ol8fxs4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -246,15 +229,11 @@
       <ul>
         
           <li>
+            <a href="/2021/10/26/JavaScript/">JavaScript-simple</a>
+          </li>
+        
+          <li>
             <a href="/2021/10/26/onlineFinance/">onlineFinance</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/25/JavaScript/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/13/ypp/">(no title)</a>
           </li>
         
       </ul>
