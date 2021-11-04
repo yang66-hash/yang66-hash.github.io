@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>DataFlow_PipesFilters | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Dataflow Systems Pipes and Filters Architecture管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成这种架构适用于流数据的处理。   过滤器的功能：递增地将某些源数据转换为其他数据 添加信息。计算和添加信息使数据得以丰富。 变换数据。通过改变状态来传输数据。 流对流变换。流到流的转换。 不保留状态。在过滤器的两次实例化之间不保留任何状">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DataFlow_PipesFilters">
+<meta property="og:url" content="http://example.com/2021/11/04/DataFlow-PipesFilters/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Dataflow Systems Pipes and Filters Architecture管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成这种架构适用于流数据的处理。   过滤器的功能：递增地将某些源数据转换为其他数据 添加信息。计算和添加信息使数据得以丰富。 变换数据。通过改变状态来传输数据。 流对流变换。流到流的转换。 不保留状态。在过滤器的两次实例化之间不保留任何状">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/11/04/DataFlow-PipesFilters/DataFlow-PipesFilters/image-20211104172536769.png">
+<meta property="og:image" content="http://example.com/2021/11/04/DataFlow-PipesFilters/DataFlow-PipesFilters/image-20211104190745108.png">
+<meta property="article:published_time" content="2021-11-04T09:19:55.000Z">
+<meta property="article:modified_time" content="2021-11-04T11:21:21.762Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/11/04/DataFlow-PipesFilters/DataFlow-PipesFilters/image-20211104172536769.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-DataFlow-PipesFilters" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/04/DataFlow-PipesFilters/" class="article-date">
+  <time datetime="2021-11-04T09:19:55.000Z" itemprop="datePublished">2021-11-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DataFlow_PipesFilters
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Dataflow-Systems-Pipes-and-Filters-Architecture"><a href="#Dataflow-Systems-Pipes-and-Filters-Architecture" class="headerlink" title="Dataflow Systems Pipes and Filters Architecture"></a>Dataflow Systems Pipes and Filters Architecture</h1><h6 id="管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成"><a href="#管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成" class="headerlink" title="管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成"></a>管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成</h6><p>这种架构适用于流数据的处理。</p>
+<img src="DataFlow-PipesFilters/image-20211104172536769.png" alt="image-20211104172536769" style="zoom: 50%;" />
+
+<h6 id="过滤器的功能：递增地将某些源数据转换为其他数据"><a href="#过滤器的功能：递增地将某些源数据转换为其他数据" class="headerlink" title="过滤器的功能：递增地将某些源数据转换为其他数据"></a>过滤器的功能：递增地将某些源数据转换为其他数据</h6><ul>
+<li>添加信息。计算和添加信息使数据得以丰富。</li>
+<li>变换数据。通过改变状态来传输数据。</li>
+<li>流对流变换。流到流的转换。</li>
+<li>不保留状态。在过滤器的两次实例化之间不保留任何状态，即过滤器并不记录每一次发生了什么操作。</li>
+</ul>
+<h6 id="管道的功能：把数据从一个过滤器的输出移到另一个的输入。"><a href="#管道的功能：把数据从一个过滤器的输出移到另一个的输入。" class="headerlink" title="管道的功能：把数据从一个过滤器的输出移到另一个的输入。"></a>管道的功能：把数据从一个过滤器的输出移到另一个的输入。</h6><p>架构的整体运行机制：运行管道与过滤器直到没有任何计算，数据的搬运只是进行数据处理的媒介。</p>
+<p>书记在以数据流的方式从左端流入，流经各个过滤器之后，对数据进行处理，但与处理完的数据，立即写到下游管道。</p>
+<h6 id="批处理架构和管道-过滤器架构的比较"><a href="#批处理架构和管道-过滤器架构的比较" class="headerlink" title="批处理架构和管道-过滤器架构的比较"></a>批处理架构和管道-过滤器架构的比较</h6><img src="DataFlow-PipesFilters/image-20211104190745108.png" alt="image-20211104190745108" style="zoom: 67%;" />
+
+<p><strong>两者的相似之处：</strong></p>
+<p>处理过程之间互不调用</p>
+<p><strong>不同点：</strong></p>
+<ul>
+<li>数据处理方式不同。前者数据是一块状形式传输的，而后者是以流的形式；</li>
+<li>管道-过滤器架构。所处理的数据量也有所不同。前者数据量是有限的，后者是无限的；</li>
+</ul>
+<p><strong>管道-过滤器架构的优缺点：</strong></p>
+<ul>
+<li>复用性好：每个过滤器的功能都是独立的；</li>
+<li>容易扩展：在处理过程中加入过滤器，能轻易实现新功能的扩展；</li>
+<li>容易修改：因为过滤器在逻辑上是独立的，容易实现系统的修改；</li>
+</ul>
+<p>管道-过滤器架构也存在缺点：</p>
+<ul>
+<li>人机交互性差：纯粹的管道-过滤器架构不存在人机交互，但是我们实际应用时，可以给每个过滤器加上用户图像界面；</li>
+<li>浪费内存：因为数据需要不断的从某个过滤器的输入端口复制到另一个的输出端口，因此内存空间利用率比较低；</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/04/DataFlow-PipesFilters/" data-id="ckvkuzkgj0000e0vnh89che3e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/11/04/LayerdArchitecture/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">LayerdArchitecture</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/04/DataFlow-PipesFilters/">DataFlow_PipesFilters</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/04/LayerdArchitecture/">LayerdArchitecture</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/26/JavaScript/">JavaScript-simple</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/26/onlineFinance/">onlineFinance</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>LayerdArchitecture | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Layered Architecture概念：层次系统是按照层次组织的。每一层都为其上面一层提供服务，并且充当下面一层的客户。拓扑限制：交互只在相邻层进行，不允许隔层调用，也不允许有相反方向的调用  层次架构的优点： 支持基于逐层增加的抽象级别的设计。这样实现着便能将复杂问题划分为一系列逐渐增加的抽象级别的步骤； 支持更新。每个层只能与相邻层交互，对一层的改变最多影响到两层； 支持复用。同一层可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LayerdArchitecture">
+<meta property="og:url" content="http://example.com/2021/11/04/LayerdArchitecture/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Layered Architecture概念：层次系统是按照层次组织的。每一层都为其上面一层提供服务，并且充当下面一层的客户。拓扑限制：交互只在相邻层进行，不允许隔层调用，也不允许有相反方向的调用  层次架构的优点： 支持基于逐层增加的抽象级别的设计。这样实现着便能将复杂问题划分为一系列逐渐增加的抽象级别的步骤； 支持更新。每个层只能与相邻层交互，对一层的改变最多影响到两层； 支持复用。同一层可以">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/11/04/LayerdArchitecture/LayerdArchitecture/adjiajq-16359940594671.png">
+<meta property="og:image" content="http://example.com/2021/11/04/LayerdArchitecture/LayerdArchitecture/dqdqwero.png">
+<meta property="article:published_time" content="2021-11-04T01:24:24.000Z">
+<meta property="article:modified_time" content="2021-11-04T03:12:38.089Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/11/04/LayerdArchitecture/LayerdArchitecture/adjiajq-16359940594671.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-LayerdArchitecture" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/04/LayerdArchitecture/" class="article-date">
+  <time datetime="2021-11-04T01:24:24.000Z" itemprop="datePublished">2021-11-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LayerdArchitecture
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Layered-Architecture"><a href="#Layered-Architecture" class="headerlink" title="Layered Architecture"></a>Layered Architecture</h1><h6 id="概念：层次系统是按照层次组织的。每一层都为其上面一层提供服务，并且充当下面一层的客户。"><a href="#概念：层次系统是按照层次组织的。每一层都为其上面一层提供服务，并且充当下面一层的客户。" class="headerlink" title="概念：层次系统是按照层次组织的。每一层都为其上面一层提供服务，并且充当下面一层的客户。"></a>概念：层次系统是按照层次组织的。每一层都为其上面一层提供服务，并且充当下面一层的客户。</h6><p>拓扑限制：<strong>交互只在相邻层进行</strong>，不允许隔层调用，也不允许有相反方向的调用</p>
+<p><img src="LayerdArchitecture/adjiajq-16359940594671.png" alt="adjiajq"></p>
+<h6 id="层次架构的优点："><a href="#层次架构的优点：" class="headerlink" title="层次架构的优点："></a>层次架构的优点：</h6><ul>
+<li>支持基于逐层增加的抽象级别的设计。这样实现着便能将复杂问题划分为一系列逐渐增加的抽象级别的步骤；</li>
+<li>支持更新。每个层只能与相邻层交互，对一层的改变最多影响到两层；</li>
+<li>支持复用。同一层可以有不同实现，只要他们支持到相邻层的相同接口即可；这意味着要是规定接口的标准，每一层便可以由不同的软件开发团队构建；</li>
+</ul>
+<h6 id="层次架构的缺点："><a href="#层次架构的缺点：" class="headerlink" title="层次架构的缺点："></a>层次架构的缺点：</h6><p>并非是所有的系统都能很轻松地以分层的方式构建。即便是能实现逻辑上的耦合，但实际上从性能方面考虑还是可能需要高层函数与更底层的函数直接实现耦合，况且层次架构很难找到正确的抽象层次。</p>
+<p>通用的三层架构：</p>
+<p>表示层：一般是指用户图形界面，实现与用户的交互；<u>表示层调用应用层组件的过程，函数或者方法。但是应用层从来不会调用表示层的功能</u>。</p>
+<p>应用层：也称业务逻辑层，主要是包括应用的业务逻辑，实现其商用功能。该层的组建中封装了该应用的核心数据以及功能。<u>若是要访问数据库或者是向数据库中存储数据，都必须调用永久数据层的相应数据库访问方法，而并非直接访问</u>（即不是直接在应用层中使用SQL语句）</p>
+<p>永久数据存储层：实现数据库的访问以及将数据存储到数据库中的功能。（如Java连接数据库，那么这就包括了JDBC连接数据库代码，以及一系列访问数据库、实现数据存储的代码）。该层只能回被调用，将数据库返回应用层。</p>
+<h6 id="三层层次架构与MVC软件体系结构的比较"><a href="#三层层次架构与MVC软件体系结构的比较" class="headerlink" title="三层层次架构与MVC软件体系结构的比较"></a>三层层次架构与MVC软件体系结构的比较</h6><h6 id=""><a href="#" class="headerlink" title=""></a><img src="LayerdArchitecture/dqdqwero.png" alt="dqdqwero"></h6><p><strong>三层层次架构在形式上与MVC架构相似，但实际上并不相同。</strong></p>
+<p>相似点：</p>
+<ul>
+<li>都是三部分软件模块组成；</li>
+<li>三层架构的表示层与MVC中的V（View）相似；</li>
+<li>三层架构的应用层与MVC中的M（Model）相似；</li>
+</ul>
+<p>不同点：</p>
+<ul>
+<li>各个模块之间的调用关系并不相同。三层架构的交互是线性的，而MVC架构程序组件之间的交互是三角形的；</li>
+<li>对数据库的访问方式不同。三层架构中存在永久数据访问层，所有数据访问工作均此层承担，而MVC架构没有专门的数据库访问模块，一般情况下是由Model直接访问数据库，但是Controller层中也存在直接访问的可能。</li>
+<li>关于控制模块。MVC中存在专门的Controller，而层析架构中通常是没有这样的模块的</li>
+</ul>
+<h6 id="关于观察者模式在两种架构中的应用"><a href="#关于观察者模式在两种架构中的应用" class="headerlink" title="关于观察者模式在两种架构中的应用"></a>关于观察者模式在两种架构中的应用</h6><p>在三层架构中，可以在应用层与表示层（观察者）之间使用观察者模式。在MVC架构中可以在View（观察者）和Model之间使用观察者模式。</p>
+<p>**注意:**在三层架构中使用观察者模式必然会导致应用层对表示层的调用，这违反了层次架构的原则，但是这种违规提高了更新图形界面的效率，是值得的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/04/LayerdArchitecture/" data-id="ckvkuzkgq0002e0vn207e11a2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/04/DataFlow-PipesFilters/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          DataFlow_PipesFilters
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/10/26/JavaScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript-simple</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/04/DataFlow-PipesFilters/">DataFlow_PipesFilters</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/04/LayerdArchitecture/">LayerdArchitecture</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/26/JavaScript/">JavaScript-simple</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/26/onlineFinance/">onlineFinance</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
