@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>AdapterPatternAndSomethingElse | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Adapter Pattern一、类适配器模式（Class adapter pattern）和对象适配器模式（Object adapter pattern）在Java中，对象适配器是无法实现适配多个类的情况的，而使用对象适配器则可以适配多个类。 一个Target接口是可以有多个适配器的。 二、什么情况适合使用（类、对象）适配器？①当你想使用一个已经存在的类，但是该类的接口并不是你想要的时候。 ②当">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AdapterPatternAndSomethingElse">
+<meta property="og:url" content="http://example.com/2021/11/07/AdapterPatternAndSomethingElse/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Adapter Pattern一、类适配器模式（Class adapter pattern）和对象适配器模式（Object adapter pattern）在Java中，对象适配器是无法实现适配多个类的情况的，而使用对象适配器则可以适配多个类。 一个Target接口是可以有多个适配器的。 二、什么情况适合使用（类、对象）适配器？①当你想使用一个已经存在的类，但是该类的接口并不是你想要的时候。 ②当">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-07T12:07:23.000Z">
+<meta property="article:modified_time" content="2021-11-07T13:44:25.298Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-AdapterPatternAndSomethingElse" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/07/AdapterPatternAndSomethingElse/" class="article-date">
+  <time datetime="2021-11-07T12:07:23.000Z" itemprop="datePublished">2021-11-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AdapterPatternAndSomethingElse
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Adapter-Pattern"><a href="#Adapter-Pattern" class="headerlink" title="Adapter Pattern"></a>Adapter Pattern</h1><h4 id="一、类适配器模式（Class-adapter-pattern）和对象适配器模式（Object-adapter-pattern）"><a href="#一、类适配器模式（Class-adapter-pattern）和对象适配器模式（Object-adapter-pattern）" class="headerlink" title="一、类适配器模式（Class adapter pattern）和对象适配器模式（Object adapter pattern）"></a>一、类适配器模式（Class adapter pattern）和对象适配器模式（Object adapter pattern）</h4><p><strong>在Java中，对象适配器是无法实现适配多个类的情况的，而使用对象适配器则可以适配多个类。</strong></p>
+<p>一个Target接口是可以有多个适配器的。</p>
+<h4 id="二、什么情况适合使用（类、对象）适配器？"><a href="#二、什么情况适合使用（类、对象）适配器？" class="headerlink" title="二、什么情况适合使用（类、对象）适配器？"></a>二、什么情况适合使用（类、对象）适配器？</h4><p><strong>①当你想使用一个已经存在的类，但是该类的接口并不是你想要的时候。</strong></p>
+<p><strong>②当你想要创建一个可以复用的类的，该类与一些互不相关的接口不相容的类进行合作，或者说是你要改变许多子类的接口。在这种情况下，可以使用对象适配器模式。</strong></p>
+<h4 id="三、适配器模式的应用主要体现在两个方面"><a href="#三、适配器模式的应用主要体现在两个方面" class="headerlink" title="三、适配器模式的应用主要体现在两个方面"></a>三、适配器模式的应用主要体现在两个方面</h4><ul>
+<li><strong>改变接口（主要的。添加功能也可以看做是改变接口，因为增加功能也就改变了接口）；</strong></li>
+<li><strong>增加功能；</strong></li>
+</ul>
+<h4 id="四、两种适配器的不同点"><a href="#四、两种适配器的不同点" class="headerlink" title="四、两种适配器的不同点"></a>四、两种适配器的不同点</h4><p><u>在类适配器中，被适配类中所有的属性和方法都是被继承来的。</u></p>
+<p><u>在对象适配器中，被适配类中往往只是选择一个或者是几个方法放入适配器类中</u></p>
+<h1 id="Lect3-MainProgram-subroutine-OOSystem"><a href="#Lect3-MainProgram-subroutine-OOSystem" class="headerlink" title="Lect3_MainProgram_subroutine-OOSystem"></a><strong>Lect3_MainProgram_subroutine-OOSystem</strong></h1><p><strong>主程序-子程序系统以及面向对象系统</strong></p>
+<h4 id="一、面向对象设计"><a href="#一、面向对象设计" class="headerlink" title="一、面向对象设计"></a>一、面向对象设计</h4><p><strong>面向对象设计的原理：基于信息隐藏</strong></p>
+<h5 id="①什么叫做对象？包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。"><a href="#①什么叫做对象？包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。" class="headerlink" title="①什么叫做对象？包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。"></a>①什么叫做对象？包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。</h5><h5 id="②面相对象的基本概念：对象被用于统一算法抽象和数据抽象的思想。"><a href="#②面相对象的基本概念：对象被用于统一算法抽象和数据抽象的思想。" class="headerlink" title="②面相对象的基本概念：对象被用于统一算法抽象和数据抽象的思想。"></a>②面相对象的基本概念：对象被用于统一算法抽象和数据抽象的思想。</h5><p><strong>③面向对象设计的性质：封装、继承、动态绑定以及复用和维护。</strong></p>
+<p>④<strong>面向对象设计的优点：</strong></p>
+<p><strong>a) 程序容易维护(Easier maintenance)。由于对象对其客户程序隐藏其表示，因此可以在不影响客户程序的情况下改变实现。对象可以理解为独立实体；</strong></p>
+<p><strong>b) 对象是可复用的组件(Reusable)；</strong></p>
+<p><strong>c) 在一些系统中，对象是现实现实世界的映射；</strong></p>
+<p><strong>d) 容易分解系统(Easy decomposition of a system) 对象将一组可访问的方法与其操作的数据捆绑在一起，允许设计人员将问题分解为互相交互的对象的集合。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/07/AdapterPatternAndSomethingElse/" data-id="ckvrs1zy900037ovn4m2q95ih" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          DataflowSystemsAndBatchSequentialArchitecture
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/07/AbstractFactory/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">AbstractFactory</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/09/ObseverPattern/">ObseverPattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/09/MediatorPattern/">MediatorPattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/08/VisitorPattern/">VisitorPattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/08/StatePattern/">StatePattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/07/StrategyBehavioral/">StrategyBehavioral</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

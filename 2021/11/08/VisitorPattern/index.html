@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>VisitorPattern | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Visitor Pattern访问者模式的组件访问者类为每一个Element子类准备一个访问者方法，方法名便表明向访问者发出观察请求类是哪一个。 访问者决定要访问哪个类。 访问者模式构件的解释 具体Visitor实现子类必须实现Visitor类的接口中所声明的所有操作； 提供算法环境、存储局部状态、积累遍历结构体的结果； Element接口中必须要定义以visitor为参数的accept（）方法；">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VisitorPattern">
+<meta property="og:url" content="http://example.com/2021/11/08/VisitorPattern/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Visitor Pattern访问者模式的组件访问者类为每一个Element子类准备一个访问者方法，方法名便表明向访问者发出观察请求类是哪一个。 访问者决定要访问哪个类。 访问者模式构件的解释 具体Visitor实现子类必须实现Visitor类的接口中所声明的所有操作； 提供算法环境、存储局部状态、积累遍历结构体的结果； Element接口中必须要定义以visitor为参数的accept（）方法；">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/11/08/VisitorPattern/VisitorPattern.png">
+<meta property="article:published_time" content="2021-11-08T11:34:10.000Z">
+<meta property="article:modified_time" content="2021-11-08T13:40:28.901Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/11/08/VisitorPattern/VisitorPattern.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-VisitorPattern" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/08/VisitorPattern/" class="article-date">
+  <time datetime="2021-11-08T11:34:10.000Z" itemprop="datePublished">2021-11-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VisitorPattern
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Visitor-Pattern"><a href="#Visitor-Pattern" class="headerlink" title="Visitor Pattern"></a>Visitor Pattern</h1><h4 id="访问者模式的组件"><a href="#访问者模式的组件" class="headerlink" title="访问者模式的组件"></a>访问者模式的组件</h4><p>访问者类为每一个Element子类准备一个访问者方法，方法名便表明向访问者发出观察请求类是哪一个。</p>
+<p>访问者决定要访问哪个类。</p>
+<h4 id="访问者模式构件的解释"><a href="#访问者模式构件的解释" class="headerlink" title="访问者模式构件的解释"></a>访问者模式构件的解释</h4><ul>
+<li><strong>具体Visitor实现子类必须实现Visitor类的接口中所声明的所有操作；</strong></li>
+<li><strong>提供算法环境、存储局部状态、积累遍历结构体的结果；</strong></li>
+<li><strong>Element接口中必须要定义以visitor为参数的accept（）方法；</strong></li>
+<li><strong>具体的Element类必须实现被定义accept（）方法，也可实现一些其他方法；</strong></li>
+<li><strong>ObjectStructure类中可以使用聚合结构，如ArrayList或者Vector将被访问者对象集合在一起，然后再使用一个循环语句批量调用accept（）方法。</strong></li>
+</ul>
+<img src="/2021/11/08/VisitorPattern/VisitorPattern.png" class="" title="This is an test image">
+
+<h4 id="什么时候使用访问者模式？"><a href="#什么时候使用访问者模式？" class="headerlink" title="什么时候使用访问者模式？"></a>什么时候使用访问者模式？</h4><p><strong>①当对象结构包含很多子类，而这些类有不同的接口你需要针对不同的类进行不同操作。</strong></p>
+<p><strong>②许多不同的且不相干的操作需要施加于对象结构，而你想要避免这些不同的操作污染这些类；</strong></p>
+<p><strong>③对象结构很少改变（例如税收的种类很少改变），但是你需要经常在这些结构体上增加新的运算（税率可能改变）。</strong></p>
+<h4 id="访问者模式的优点"><a href="#访问者模式的优点" class="headerlink" title="访问者模式的优点"></a>访问者模式的优点</h4><p>①访问者模式使得添加新方法变得更加轻松。相反，如果将功能扩展到多个类，则必须更改每个类以定义新操作。</p>
+<p>②访问者聚集相关操作并分离无关操作；</p>
+<h4 id="访问者模式的缺点"><a href="#访问者模式的缺点" class="headerlink" title="访问者模式的缺点"></a>访问者模式的缺点</h4><p>添加一个新的具体待访问元素（concreteElement）是困难的。因为添加一个待访问元素，就需要在Visitor抽象类中添加相应的访问方法，每个具体实现类都需要实现这个方法。</p>
+<h4 id="什么是访问者模式的重点？"><a href="#什么是访问者模式的重点？" class="headerlink" title="什么是访问者模式的重点？"></a>什么是访问者模式的重点？</h4><p><strong><u>用于使得被访问者与访问者之间建立自动访问的accept方法是重点</u>。该方法建立了两个层次类之间的关联。该方法使得自动访问成为可能。</strong></p>
+<p><strong>注</strong>: <strong>ObjectStructure类对于批量访问很重要。另外使用此类，可以使得客户类包含较少的条件语句。能够有效地做到责任分离。</strong></p>
+<p><strong>结论: 要写好accept方法与ObjectStructure</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/08/VisitorPattern/" data-id="ckvrs1zyi000d7ovn2vonfoyq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/09/MediatorPattern/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MediatorPattern
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/08/StatePattern/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">StatePattern</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/09/ObseverPattern/">ObseverPattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/09/MediatorPattern/">MediatorPattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/08/VisitorPattern/">VisitorPattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/08/StatePattern/">StatePattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/07/StrategyBehavioral/">StrategyBehavioral</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

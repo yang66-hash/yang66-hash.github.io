@@ -5,30 +5,30 @@
   
 
   
-  <title>softwareArchiteture | Hexo</title>
+  <title>FactoryMethod | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="软件体系结构与设计模式一、基本概念为什么使用设计模式？ 学习专家经验； 统一交流语言； 可以实现成功案例重复利用； 提供设计修改；  什么叫做软件体系结构？一个项目或者是计算系统的软件架构是由软件组件（software components）、外部可见性质（the externally visible properties of those components）和组件之间关系（the relat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="softwareArchiteture">
-<meta property="og:url" content="http://example.com/2021/11/05/softwareArchiteture/index.html">
+<meta property="og:title" content="FactoryMethod">
+<meta property="og:url" content="http://example.com/2021/11/05/FactoryMethod/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="软件体系结构与设计模式一、基本概念为什么使用设计模式？ 学习专家经验； 统一交流语言； 可以实现成功案例重复利用； 提供设计修改；  什么叫做软件体系结构？一个项目或者是计算系统的软件架构是由软件组件（software components）、外部可见性质（the externally visible properties of those components）和组件之间关系（the relat">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/FBD.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/20211105214627.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/20211105232503.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/CompositionRelation.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/Realizationrelation.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/GeneralizationRelation.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/20211106164331.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/SampleFactoryPattern0.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/SampleFactoryPattern.png">
-<meta property="og:image" content="http://example.com/2021/11/05/softwareArchiteture/FactoryPattern.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/FBD.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/20211105214627.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/20211105232503.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/CompositionRelation.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/Realizationrelation.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/GeneralizationRelation.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/20211106164331.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/SampleFactoryPattern0.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/SampleFactoryPattern.png">
+<meta property="og:image" content="http://example.com/2021/11/05/FactoryMethod/FactoryPattern.png">
 <meta property="article:published_time" content="2021-11-05T13:41:02.000Z">
-<meta property="article:modified_time" content="2021-11-06T11:32:20.521Z">
+<meta property="article:modified_time" content="2021-11-06T11:36:15.240Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/11/05/softwareArchiteture/FBD.png">
+<meta name="twitter:image" content="http://example.com/2021/11/05/FactoryMethod/FBD.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -77,9 +77,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-softwareArchiteture" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-FactoryMethod" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/11/05/softwareArchiteture/" class="article-date">
+    <a href="/2021/11/05/FactoryMethod/" class="article-date">
   <time datetime="2021-11-05T13:41:02.000Z" itemprop="datePublished">2021-11-05</time>
 </a>
     
@@ -91,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      softwareArchiteture
+      FactoryMethod
     </h1>
   
 
@@ -108,22 +108,22 @@
 <h5 id="什么叫做软件体系结构？"><a href="#什么叫做软件体系结构？" class="headerlink" title="什么叫做软件体系结构？"></a>什么叫做软件体系结构？</h5><p>一个项目或者是计算系统的软件架构是由软件组件（software components）、外部可见性质（the externally visible properties of those components）和组件之间关系（the relationships among software components）组成的系统结构。</p>
 <h5 id="软件体系结构是软件的整体架构，用于描述整个软件系统的结构。"><a href="#软件体系结构是软件的整体架构，用于描述整个软件系统的结构。" class="headerlink" title="软件体系结构是软件的整体架构，用于描述整个软件系统的结构。"></a>软件体系结构是软件的整体架构，用于描述整个软件系统的结构。</h5><h4 id="二、Java类之间的关系（relationship-between-classes）"><a href="#二、Java类之间的关系（relationship-between-classes）" class="headerlink" title="二、Java类之间的关系（relationship between classes）"></a>二、Java类之间的关系（relationship between classes）</h4><p><strong>①Association relation——关联关系</strong></p>
 <p>类与类之间的联结，即一个类知道另一个类的属性和方法 。关联可以是双向的，也可以是单向的。双向的关联可以有<strong>两个箭头或者没有箭头</strong>，<strong>单向的关联有一个箭头</strong>。在 Java 中，关联关系是通过使用成员变量、方法或者是方法参数来实现的。</p>
-<img src="/2021/11/05/softwareArchiteture/FBD.png" class="" title="Association Relation">
+<img src="/2021/11/05/FactoryMethod/FBD.png" class="" title="Association Relation">
 
 <h5 id="②Aggregation-relation——聚合关系"><a href="#②Aggregation-relation——聚合关系" class="headerlink" title="②Aggregation relation——聚合关系"></a>②Aggregation relation——聚合关系</h5><p>聚合是一种更强的关联关系，其表达的是部分和整体的关系。</p>
-<img src="/2021/11/05/softwareArchiteture/20211105214627.png" class="" title="Aggregation Relation">
+<img src="/2021/11/05/FactoryMethod/20211105214627.png" class="" title="Aggregation Relation">
 
 <h5 id="③Dependency-relation——依赖关系"><a href="#③Dependency-relation——依赖关系" class="headerlink" title="③Dependency relation——依赖关系"></a>③Dependency relation——依赖关系</h5><p>一个类的实现需要另一个类的协助</p>
-<img src="/2021/11/05/softwareArchiteture/20211105232503.png" class="" title="Dependency Relation">
+<img src="/2021/11/05/FactoryMethod/20211105232503.png" class="" title="Dependency Relation">
 
 <h5 id="④Composition-relation——组合关系"><a href="#④Composition-relation——组合关系" class="headerlink" title="④Composition relation——组合关系"></a>④Composition relation——组合关系</h5><p>部分与整体的关系，但是部分并不能脱离整体而存在。用带实心的菱形实线，菱形指向整体。</p>
-<img src="/2021/11/05/softwareArchiteture/CompositionRelation.png" class="" title="Composition Relation">
+<img src="/2021/11/05/FactoryMethod/CompositionRelation.png" class="" title="Composition Relation">
 
 <h5 id="⑤Realization-relation——实现关系"><a href="#⑤Realization-relation——实现关系" class="headerlink" title="⑤Realization relation——实现关系"></a>⑤Realization relation——实现关系</h5><p>指的是一个类实现interface接口。在Java中用implements关键字明确标识。</p>
-<img src="/2021/11/05/softwareArchiteture/Realizationrelation.png" class="" title="Realization relation">
+<img src="/2021/11/05/FactoryMethod/Realizationrelation.png" class="" title="Realization relation">
 
 <h5 id="⑥Generalization-Relation——继承关系（泛化）"><a href="#⑥Generalization-Relation——继承关系（泛化）" class="headerlink" title="⑥Generalization Relation——继承关系（泛化）"></a>⑥Generalization Relation——继承关系（泛化）</h5><p>用于描述父子类之间的关系，父类又叫做超类、基类，子类又叫做派生类。</p>
-<img src="/2021/11/05/softwareArchiteture/GeneralizationRelation.png" class="" title="Generalization Relation">
+<img src="/2021/11/05/FactoryMethod/GeneralizationRelation.png" class="" title="Generalization Relation">
 
 
 
@@ -139,7 +139,7 @@
 <li>客户程序还要知道服务提供者服务类的全部细节，即需要知道在每个子类中服务提供者都提供了什么功能。</li>
 </ul>
 <p>要改善这种设计，就要用到工厂方法模式，即创建一个专门的类专门的方法来实现对服务层次类的选择以及初始化——<strong>委托的方法</strong>。</p>
-<img src="/2021/11/05/softwareArchiteture/20211106164331.png" class="" title="Factory Method">
+<img src="/2021/11/05/FactoryMethod/20211106164331.png" class="" title="Factory Method">
 
 <h3 id="二、工厂方法的功能及其优点"><a href="#二、工厂方法的功能及其优点" class="headerlink" title="二、工厂方法的功能及其优点"></a>二、工厂方法的功能及其优点</h3><p><strong>功能：</strong></p>
 <ul>
@@ -154,16 +154,16 @@
 <li>这样对客户程序隐藏了初始化对象的复杂细节，工厂方法来承担初始化工作。</li>
 <li>客户程序只知道哪种类型的类对象被创建，而不必知道哪个具体的子类被初始化，即客户类自知道创建的父类类型。</li>
 </ul>
-<h3 id="三、两种不同的工厂方法模式"><a href="#三、两种不同的工厂方法模式" class="headerlink" title="三、两种不同的工厂方法模式"></a>三、两种不同的工厂方法模式</h3><h4 id="1-简单工厂方法模式"><a href="#1-简单工厂方法模式" class="headerlink" title="1.简单工厂方法模式"></a>1.简单工厂方法模式</h4><img src="/2021/11/05/softwareArchiteture/SampleFactoryPattern0.png" class="" title="Sample Factory Pattern">
+<h3 id="三、两种不同的工厂方法模式"><a href="#三、两种不同的工厂方法模式" class="headerlink" title="三、两种不同的工厂方法模式"></a>三、两种不同的工厂方法模式</h3><h4 id="1-简单工厂方法模式"><a href="#1-简单工厂方法模式" class="headerlink" title="1.简单工厂方法模式"></a>1.简单工厂方法模式</h4><img src="/2021/11/05/FactoryMethod/SampleFactoryPattern0.png" class="" title="Sample Factory Pattern">
 
-<img src="/2021/11/05/softwareArchiteture/SampleFactoryPattern.png" class="" title="Sample Factory Pattern">
+<img src="/2021/11/05/FactoryMethod/SampleFactoryPattern.png" class="" title="Sample Factory Pattern">
 
 <h5 id="简单工厂方法的优点："><a href="#简单工厂方法的优点：" class="headerlink" title="简单工厂方法的优点："></a>简单工厂方法的优点：</h5><ul>
 <li>将创建，初始化服务层次类的逻辑包含其中，使得客户类不再需要自己创建对象。将客户类与服务提供者提供的层次类解耦。</li>
 <li>实现责任分离；</li>
 </ul>
 <h5 id="简单工厂方法的缺点："><a href="#简单工厂方法的缺点：" class="headerlink" title="简单工厂方法的缺点："></a>简单工厂方法的缺点：</h5><p>添加product子类时，需要改变factory的源代码，继续要在工厂方法面的代码再增加一个条件语句。</p>
-<h4 id="2-工厂方法模式"><a href="#2-工厂方法模式" class="headerlink" title="2.工厂方法模式"></a>2.工厂方法模式</h4><img src="/2021/11/05/softwareArchiteture/FactoryPattern.png" class="" title="Factory Pattern">
+<h4 id="2-工厂方法模式"><a href="#2-工厂方法模式" class="headerlink" title="2.工厂方法模式"></a>2.工厂方法模式</h4><img src="/2021/11/05/FactoryMethod/FactoryPattern.png" class="" title="Factory Pattern">
 
 <h6 id="工厂方法中并无条件语句，因为其将条件语句的选择情况转化为了每一个具体工场子类对应一种产品实例化。"><a href="#工厂方法中并无条件语句，因为其将条件语句的选择情况转化为了每一个具体工场子类对应一种产品实例化。" class="headerlink" title="工厂方法中并无条件语句，因为其将条件语句的选择情况转化为了每一个具体工场子类对应一种产品实例化。"></a>工厂方法中并无条件语句，因为其将条件语句的选择情况转化为了每一个具体工场子类对应一种产品实例化。</h6><h5 id="3-简单工厂方法与工厂方法的比较："><a href="#3-简单工厂方法与工厂方法的比较：" class="headerlink" title="3.简单工厂方法与工厂方法的比较："></a>3.简单工厂方法与工厂方法的比较：</h5><ul>
 <li><strong>中心不同，在简单工厂方法中中心是具体的静态工厂类，而在工厂方法中中心是抽象工厂类（接口）。</strong></li>
@@ -181,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/05/softwareArchiteture/" data-id="ckvnq9qwq0003twvnhqfpaa90" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/05/FactoryMethod/" data-id="ckvrs1zyb00067ovnbwcd37fx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,6 +189,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2021/11/06/MVCArchitecture/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MVCArchitecture
+        
+      </div>
+    </a>
   
   
     <a href="/2021/11/04/DataFlow_PipesFilters/" id="article-nav-older" class="article-nav-link-wrap">
@@ -230,23 +239,23 @@
       <ul>
         
           <li>
-            <a href="/2021/11/05/softwareArchiteture/">softwareArchiteture</a>
+            <a href="/2021/11/09/ObseverPattern/">ObseverPattern</a>
           </li>
         
           <li>
-            <a href="/2021/11/04/DataFlow_PipesFilters/">DataFlow_PipesFilters</a>
+            <a href="/2021/11/09/MediatorPattern/">MediatorPattern</a>
           </li>
         
           <li>
-            <a href="/2021/11/04/LayerdArchitecture/">LayerdArchitecture</a>
+            <a href="/2021/11/08/VisitorPattern/">VisitorPattern</a>
           </li>
         
           <li>
-            <a href="/2021/10/26/JavaScript/">JavaScript-simple</a>
+            <a href="/2021/11/08/StatePattern/">StatePattern</a>
           </li>
         
           <li>
-            <a href="/2021/10/26/onlineFinance/">onlineFinance</a>
+            <a href="/2021/11/07/StrategyBehavioral/">StrategyBehavioral</a>
           </li>
         
       </ul>
