@@ -87,13 +87,26 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Observer-Pattern"><a href="#Observer-Pattern" class="headerlink" title="Observer Pattern"></a>Observer Pattern</h1><p>观察者模式有助于在一组相关对象（Observers）和它们所依赖的对象（Subjects）之间设计一致的通信模型。</p>
-<p>当你可以将一个程序中的对象分为主题与观察者的时候，可以使用如下的观察者模式进行设计。</p>
+<p><strong>当你可以将一个程序中的对象分为主题与观察者的时候，可以使用如下的观察者模式进行设计。</strong></p>
 
 
+<h4 id="一、有关于观察者模式"><a href="#一、有关于观察者模式" class="headerlink" title="一、有关于观察者模式"></a>一、有关于观察者模式</h4><p>①一个主题可以有多个观察者，观察者需要知道主题的状态何时发生变化；</p>
+<p>②主题保持一个动态列表，记录已经注册的观察者。</p>
+<p>观察者模式必须要包含的活动</p>
+<p>①观察者必须要注册自身；</p>
+<p>②当主题状态改变之后，其必须通知所有被注册的观察者。</p>
+<p>③一个观察者可以查询被观察者的状态。</p>
+<h4 id="二、通知观察者的两种策略"><a href="#二、通知观察者的两种策略" class="headerlink" title="二、通知观察者的两种策略"></a>二、通知观察者的两种策略</h4><p>①将观察者所需要的数据全部推给观察者；（Push Model）</p>
+<p>②主题提供接口，供观察者访问；（Pull Model）</p>
+<h4 id="三、使用观察者的好处"><a href="#三、使用观察者的好处" class="headerlink" title="三、使用观察者的好处"></a>三、使用观察者的好处</h4><p><strong>①可以动态添加观察者而不需要影响主题。</strong></p>
+<p><strong>②当主题的状态或者逻辑发生变化的时候，观察者不受影响。</strong></p>
+<h4 id="四、什么时候使用观察者？"><a href="#四、什么时候使用观察者？" class="headerlink" title="四、什么时候使用观察者？"></a>四、什么时候使用观察者？</h4><p><strong>①一个对象的状态改变必须反映在另一个对象中，而你又不想让两个对象保持高耦合</strong></p>
+<p><strong>②你设计的框架将来需要添加许多观察者，而你希望以最小限度地改变程序</strong></p>
+<h4 id="五、Java语言环境对观察者模式的支持"><a href="#五、Java语言环境对观察者模式的支持" class="headerlink" title="五、Java语言环境对观察者模式的支持"></a>五、Java语言环境对观察者模式的支持</h4><h4 id=""><a href="#" class="headerlink" title=""></a></h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/09/ObseverPattern/" data-id="ckvrs8kbv000arkvnfdmxgcat" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/09/ObseverPattern/" data-id="ckvtgzdim000bfwvndwj4fmd0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/09/MediatorPattern/" data-id="ckvrs8kbu0009rkvnbb1ib23s" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/09/MediatorPattern/" data-id="ckvtgzdik0009fwvng1o9c9ru" class="article-share-link">Share</a>
       
       
     </footer>
@@ -214,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/08/VisitorPattern/" data-id="ckvrs8kbz000drkvn3ih2fjo5" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/08/VisitorPattern/" data-id="ckvtgzdik000afwvn0a5w4pra" class="article-share-link">Share</a>
       
       
     </footer>
@@ -265,7 +278,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/08/StatePattern/" data-id="ckvrs8kbx000brkvnh1dj09qs" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/08/StatePattern/" data-id="ckvtgzdij0008fwvnh2324j2l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -314,7 +327,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/07/StrategyBehavioral/" data-id="ckvrs8kby000crkvnda5j3tjl" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/07/StrategyBehavioral/" data-id="ckvtgzdin000cfwvngzj6gcyq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -369,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/07/BridgePattern/" data-id="ckvrs8kbq0002rkvn9wbt2r85" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/07/BridgePattern/" data-id="ckvtgzdie0002fwvn8yqgapka" class="article-share-link">Share</a>
       
       
     </footer>
@@ -402,11 +415,184 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Data-flow-Systems-And-Batch-Sequential-Architecture"><a href="#Data-flow-Systems-And-Batch-Sequential-Architecture" class="headerlink" title="Data flow Systems And Batch Sequential Architecture"></a>Data flow Systems And Batch Sequential Architecture</h1><p><strong>数据流系统与批处理架构</strong></p>
+<h1 id="流数据系统"><a href="#流数据系统" class="headerlink" title="流数据系统"></a>流数据系统</h1><h4 id="一、流数据系统中数据的可用性控制着计算，设计的结构由进程之间的有序运动决定的、数据的模式是明确的系统。"><a href="#一、流数据系统中数据的可用性控制着计算，设计的结构由进程之间的有序运动决定的、数据的模式是明确的系统。" class="headerlink" title="一、流数据系统中数据的可用性控制着计算，设计的结构由进程之间的有序运动决定的、数据的模式是明确的系统。"></a>一、流数据系统中数据的可用性控制着计算，设计的结构由进程之间的有序运动决定的、数据的模式是明确的系统。</h4><p>一般来说，数据可以一任意的形式流动，数据到达组件激活，离开组件休眠。但是我们对几乎是线性的数据流系统以及相对简单，高度受限的循环结构更感兴趣。</p>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/DataFlowSystem0.png" class="" title="Data Flow System">
 
+<h5 id="关于控制流"><a href="#关于控制流" class="headerlink" title="关于控制流"></a>关于控制流</h5><p>我们关注程序中的控制流轨迹。数据可能伴随控制，但是数据不是主导，我们关系程序的执行顺序。 </p>
+<h4 id="二、数据流系统在设计方面的注意事项"><a href="#二、数据流系统在设计方面的注意事项" class="headerlink" title="二、数据流系统在设计方面的注意事项"></a>二、数据流系统在设计方面的注意事项</h4><p>主要关注数据是怎样流动的。随着数据的流动，控制被激活。设计要考虑的注意事项是数据的可用性、数据变换和数据延迟。</p>
+<h5 id="数据流系统的开发方法论"><a href="#数据流系统的开发方法论" class="headerlink" title="数据流系统的开发方法论"></a>数据流系统的开发方法论</h5><p>将系统分解为一些模块，再将模块组合成图，再运行该图。</p>
+<h1 id="批处理系统"><a href="#批处理系统" class="headerlink" title="批处理系统"></a>批处理系统</h1><img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/BatchSequentialArchitecture.png" class="" title="Batch Sequential Architecture">
+
+<h4 id="一、批处理系统概念"><a href="#一、批处理系统概念" class="headerlink" title="一、批处理系统概念"></a>一、批处理系统概念</h4><p>①批处理顺序过程由一系列处理步骤组成，中间是某种存储，如磁带、硬盘等。</p>
+<p>②每个步骤都将对输入存储器执行一些操作，以获取一些有用的信息或修改源存储器的内容，然后将结果数据保存到其接收器存储器。</p>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/BatchSequentialPattern1.png" class="" title="Batch Sequential Pattern">
+
+<h4 id="二、批处理系统性质"><a href="#二、批处理系统性质" class="headerlink" title="二、批处理系统性质"></a>二、批处理系统性质</h4><p><strong>①处理步骤是独立的程序，任何两个处理步骤之间不存在交互</strong></p>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/BatchSequentialPattern2.png" class="" title="Batch Sequential Pattern">
+
+<p><strong>②每一步在彻底运行完成之后，下一步才能开始</strong> </p>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/BatchSequentialPattern3.png" class="" title="Batch Sequential Pattern">
+
+<h5 id="③数据作为一个整体在各个步骤之间传输（理解为一种特殊的数据流；数据以块状的形态流动）；"><a href="#③数据作为一个整体在各个步骤之间传输（理解为一种特殊的数据流；数据以块状的形态流动）；" class="headerlink" title="③数据作为一个整体在各个步骤之间传输（理解为一种特殊的数据流；数据以块状的形态流动）；"></a>③数据作为一个整体在各个步骤之间传输（理解为一种特殊的数据流；数据以块状的形态流动）；</h5><h1 id="MainProgram-subroutine-OOSystem"><a href="#MainProgram-subroutine-OOSystem" class="headerlink" title="MainProgram_subroutine-OOSystem"></a><strong>MainProgram_subroutine-OOSystem</strong></h1><h2 id="主程序-子程序系统"><a href="#主程序-子程序系统" class="headerlink" title="主程序-子程序系统"></a>主程序-子程序系统</h2><h5 id="一、非结构化编程的缺点："><a href="#一、非结构化编程的缺点：" class="headerlink" title="一、非结构化编程的缺点："></a>一、非结构化编程的缺点：</h5><ul>
+<li>很难追踪程序逻辑；</li>
+<li>很难合并其它代码；</li>
+<li>修改代码并不容易(都是goto惹的祸)；</li>
+<li>很难测试特定部分的代码；</li>
+</ul>
+<h5 id="二、结构化编程"><a href="#二、结构化编程" class="headerlink" title="二、结构化编程"></a>二、结构化编程</h5><p><strong>结构化编程是一种编程范式，旨在通过广泛使用：</strong></p>
+<p><strong>子程序(subroutines)、块状结构 (block s tructures)和循环结构：for和while循环来提高计算机程序的清晰度、质量和开发时间。</strong></p>
+<p><u><strong>结构化程序定理</strong>：只要一种编程语言可以依三个方式（序列结构、选择结构和迭代结构）组合其子程序及调整控制流程，则每个可计算函数都可以用此种编程语言来表示（实现任何算法）。</u>这是结构化编程的理论基础。</p>
+<h5 id="三、调用——返回体系机构"><a href="#三、调用——返回体系机构" class="headerlink" title="三、调用——返回体系机构"></a>三、调用——返回体系机构</h5><ul>
+<li>调用返回架构使用分割征服策略；</li>
+<li>将整个系统分为更小的子系统，以减少复杂度；</li>
+<li><u>调用返回的执行顺序被一个单线程控制；</u></li>
+</ul>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/CallAndReturn.png" class="" title="Call And Return Architecture">
+
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><h2 id="面向对象设计"><a href="#面向对象设计" class="headerlink" title="面向对象设计"></a>面向对象设计</h2><p><strong>面向对象设计的原理：<u>基于信息隐藏</u></strong></p>
+<h5 id="①什么叫做对象？"><a href="#①什么叫做对象？" class="headerlink" title="①什么叫做对象？"></a>①什么叫做对象？</h5><h5 id="包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。"><a href="#包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。" class="headerlink" title="包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。"></a>包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。</h5><h5 id="②面相对象的基本概念："><a href="#②面相对象的基本概念：" class="headerlink" title="②面相对象的基本概念："></a>②面相对象的基本概念：</h5><h5 id="对象被用于统一算法抽象和数据抽象的思想。"><a href="#对象被用于统一算法抽象和数据抽象的思想。" class="headerlink" title="对象被用于统一算法抽象和数据抽象的思想。"></a>对象被用于统一算法抽象和数据抽象的思想。</h5><p><strong>③面向对象设计的性质：</strong></p>
+<p><strong>封装、继承、动态绑定以及复用和维护。</strong></p>
+<p>④<strong>面向对象设计的优点：</strong></p>
+<p><strong>a) 程序容易维护(Easier maintenance)。由于对象对其客户程序隐藏其表示，因此可以在不影响客户程序的情况下改变实现。对象可以理解为独立实体；</strong></p>
+<p><strong>b) 对象是可复用的组件(Reusable)；</strong></p>
+<p><strong>c) 在一些系统中，对象是现实现实世界的映射；</strong></p>
+<p><strong>d) 容易分解系统(Easy decomposition of a system) 对象将一组可访问的方法与其操作的数据捆绑在一起，允许设计人员将问题分解为互相交互的对象的集合。</strong></p>
+<h2 id="结构化设计与面向对象设计的区别"><a href="#结构化设计与面向对象设计的区别" class="headerlink" title="结构化设计与面向对象设计的区别"></a>结构化设计与面向对象设计的区别</h2><ul>
+<li>结构化设计结果是一颗树，其每个节点都是函数；这些函数按照一定的顺序调用，以便取得预期功能。</li>
+<li>面向对象设计得到类图，由一群类组成；每个类都将相关的数据与施加于数据上的操作组织在一起。</li>
+</ul>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/Compare.png" class="" title="Compare">
+
+<h5 id="-1"><a href="#-1" class="headerlink" title=""></a></h5><h1 id="Dataflow-Systems-Pipes-and-Filters-Architecture"><a href="#Dataflow-Systems-Pipes-and-Filters-Architecture" class="headerlink" title="Dataflow Systems Pipes and Filters Architecture"></a>Dataflow Systems Pipes and Filters Architecture</h1><h6 id="管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成"><a href="#管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成" class="headerlink" title="管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成"></a>管道-过滤器架构是由处理数据的过滤器以及在过滤器之间传输数据的管道组成</h6><p>这种架构适用于流数据的处理。</p>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/104172536769.png" class="" title="This is an test image">
+
+<h6 id="过滤器的功能：递增地将某些源数据转换为其他数据"><a href="#过滤器的功能：递增地将某些源数据转换为其他数据" class="headerlink" title="过滤器的功能：递增地将某些源数据转换为其他数据"></a>过滤器的功能：递增地将某些源数据转换为其他数据</h6><ul>
+<li>添加信息。计算和添加信息使数据得以丰富。</li>
+<li>变换数据。通过改变状态来传输数据。</li>
+<li>流对流变换。流到流的转换。</li>
+<li>不保留状态。在过滤器的两次实例化之间不保留任何状态，即过滤器并不记录每一次发生了什么操作。</li>
+</ul>
+<h6 id="管道的功能：把数据从一个过滤器的输出移到另一个的输入。"><a href="#管道的功能：把数据从一个过滤器的输出移到另一个的输入。" class="headerlink" title="管道的功能：把数据从一个过滤器的输出移到另一个的输入。"></a>管道的功能：把数据从一个过滤器的输出移到另一个的输入。</h6><p>架构的整体运行机制：运行管道与过滤器直到没有任何计算，数据的搬运只是进行数据处理的媒介。</p>
+<p>书记在以数据流的方式从左端流入，流经各个过滤器之后，对数据进行处理，但与处理完的数据，立即写到下游管道。</p>
+<h6 id="批处理架构和管道-过滤器架构的比较"><a href="#批处理架构和管道-过滤器架构的比较" class="headerlink" title="批处理架构和管道-过滤器架构的比较"></a>批处理架构和管道-过滤器架构的比较</h6><img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/4190745108.png" class="" title="This is an test image">
+
+<p><strong>两者的相似之处：</strong></p>
+<p>处理过程之间互不调用</p>
+<p><strong>不同点：</strong></p>
+<ul>
+<li>数据处理方式不同。前者数据是一块状形式传输的，而后者是以流的形式；</li>
+<li>管道-过滤器架构。所处理的数据量也有所不同。前者数据量是有限的，后者是无限的；</li>
+</ul>
+<p><strong>管道-过滤器架构的优缺点：</strong></p>
+<ul>
+<li>复用性好：每个过滤器的功能都是独立的；</li>
+<li>容易扩展：在处理过程中加入过滤器，能轻易实现新功能的扩展；</li>
+<li>容易修改：因为过滤器在逻辑上是独立的，容易实现系统的修改；</li>
+</ul>
+<p>管道-过滤器架构也存在缺点：</p>
+<ul>
+<li>人机交互性差：纯粹的管道-过滤器架构不存在人机交互，但是我们实际应用时，可以给每个过滤器加上用户图像界面；</li>
+<li>浪费内存：因为数据需要不断的从某个过滤器的输入端口复制到另一个的输出端口，因此内存空间利用率比较低；</li>
+</ul>
+<h1 id="Event-based-Software-Architecture"><a href="#Event-based-Software-Architecture" class="headerlink" title="Event-based Software Architecture"></a>Event-based Software Architecture</h1><h3 id="基于事件系统"><a href="#基于事件系统" class="headerlink" title="基于事件系统"></a>基于事件系统</h3><p>基于事件系统是这样一种系统，在这个系统中，过程并不会直接被调用（间接或者是隐式调用）</p>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/ExplicitAndImplicit.png" class="" title="Compare_call">
+
+<h4 id="组件的结构：隐式调用风格中的组件是一个模块，其接口同时提供"><a href="#组件的结构：隐式调用风格中的组件是一个模块，其接口同时提供" class="headerlink" title="组件的结构：隐式调用风格中的组件是一个模块，其接口同时提供"></a>组件的结构：隐式调用风格中的组件是一个模块，其接口同时提供</h4><ul>
+<li>一个过程集合（C++中的函数、java中的方法）;</li>
+<li>一个事件的集合；</li>
+</ul>
+<h4 id="事件处理策略：当一个事件被广播了，系统将自动调用那些已经注册了的组件，那么怎样将事件发送到已经注册了的组件中呢？"><a href="#事件处理策略：当一个事件被广播了，系统将自动调用那些已经注册了的组件，那么怎样将事件发送到已经注册了的组件中呢？" class="headerlink" title="事件处理策略：当一个事件被广播了，系统将自动调用那些已经注册了的组件，那么怎样将事件发送到已经注册了的组件中呢？"></a>事件处理策略：当一个事件被广播了，系统将自动调用那些已经注册了的组件，那么怎样将事件发送到已经注册了的组件中呢？</h4><ul>
+<li><p>策略一：有独立事件调度模块的系统；</p>
+</li>
+<li><p>策略二：无中心事件调度模块的系统(这个模型也常被叫做observable/Observer)；</p>
+</li>
+</ul>
+
+
+<p><strong>观察者模式可以被用来设计与实现比较简单的事件系统</strong></p>
+<h4 id="事件调度模块的责任是什么呢？"><a href="#事件调度模块的责任是什么呢？" class="headerlink" title="事件调度模块的责任是什么呢？"></a>事件调度模块的责任是什么呢？</h4><ul>
+<li>接受事件；</li>
+<li>分发事件；</li>
+</ul>
+<p>分发的方式：</p>
+<p>①广播事件给系统的全部模块；</p>
+<p>②仅发送事件给那些已注册了该事件的模块；</p>
+<h1 id="Client-server-Architecture"><a href="#Client-server-Architecture" class="headerlink" title="Client-server Architecture"></a>Client-server Architecture</h1><p><strong>客户端</strong>(Client)：服务请求者，软件；</p>
+<p><strong>服务器</strong>(Server)：服务提供者，软件；</p>
+<p><strong>交互方式</strong>：客户端与服务器互相交互；</p>
+<p><strong>硬件无关</strong>：此架构与硬件无关；</p>
+<p><strong>平台无关</strong>：此架构与平台( Windows, Unix）无关；</p>
+<h4 id="客户端服务器架构的动机："><a href="#客户端服务器架构的动机：" class="headerlink" title="客户端服务器架构的动机："></a>客户端服务器架构的动机：</h4><ul>
+<li>在多个用户之间共享资源；</li>
+<li>客户端软件与最终用户交互；</li>
+<li>服务器软件与共享资源交互；</li>
+</ul>
+<h4 id="一、客户端-服务器架构的演化"><a href="#一、客户端-服务器架构的演化" class="headerlink" title="一、客户端/服务器架构的演化"></a>一、客户端/服务器架构的演化</h4><h5 id="①一层客户端-服务器（……-1970’s）："><a href="#①一层客户端-服务器（……-1970’s）：" class="headerlink" title="①一层客户端/服务器（……-1970’s）："></a><strong>①一层客户端/服务器</strong>（……-1970’s）：</h5><p>大型机计算机应用程序可视为一层客户端/服务器应用程序</p>
+<p><strong>文件共享架构</strong>：</p>
+<p>PC从文件服务器请求文件；业务逻辑全部在客户端，共享资源在服务器上；在数据量较低的时候，工作情况尚可；</p>
+<p><strong>②两层客户端-服务器架构</strong>：</p>
+<p>数据库服务器取代文件服务器；</p>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/twoClientServer.png" class="" title="Client Server">
+
+<p><strong>2层客户端/服务器的内容</strong>：</p>
+<p>第1层：GUI+业务逻辑；</p>
+<p>第2层：数据库+共享资源+业务逻辑(少量的程序)；</p>
+<p><strong>两层结构很简单</strong></p>
+<p>用于小型部门决策支持；</p>
+<p>用于支持简单的Web发布应用程序；</p>
+<h5 id="两层客户端-服务器架构的优点："><a href="#两层客户端-服务器架构的优点：" class="headerlink" title="两层客户端-服务器架构的优点："></a>两层客户端-服务器架构的优点：</h5><p>与文件共享系统相比，因为两层客户端-服务器发送请求与回答而不是文件，从而降低了网络使用。</p>
+<h5 id="两层客户端-服务器架构的缺点："><a href="#两层客户端-服务器架构的缺点：" class="headerlink" title="两层客户端-服务器架构的缺点："></a>两层客户端-服务器架构的缺点：</h5><ul>
+<li><strong>局域网应用；</strong></li>
+<li><strong>受限于供应商；</strong></li>
+<li><strong>数据库开发商的锁定；</strong></li>
+<li><strong>程序配置困难；</strong></li>
+<li><strong>程序维护困难；</strong></li>
+<li><strong>软件升级困难；</strong></li>
+</ul>
+<h5 id="③3层客户端-服务器架构"><a href="#③3层客户端-服务器架构" class="headerlink" title="③3层客户端-服务器架构"></a>③3层客户端-服务器架构</h5><p>第1层：客户端 GUI；</p>
+<p>第2层：应用服务器Business Logic </p>
+<p>第3层：数据库服务器 Data；</p>
+<p><strong>在两层的客户端-服务器架构的客户端（UI）与数据库服务器(database server)之间增加了一个中间层，叫做应用服务器(application server)；</strong></p>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/threeClientServer.png" class="" title="Client Server">
+
+<h5 id="两层客户端和三层客户端的比较"><a href="#两层客户端和三层客户端的比较" class="headerlink" title="两层客户端和三层客户端的比较"></a>两层客户端和三层客户端的比较</h5><img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/ClientServerCompare.jpg" class="" title="Client Server">
+
+<ul>
+<li>三层客户端-服务器架构更容易维护；</li>
+<li>三层客户端-服务器架构可以有瘦客户端；</li>
+<li>在三客户端-服务器架构中，各层开发语言可以是互相独立的；</li>
+<li>三层客户端-服务器架构可以连接到多个数据库；</li>
+</ul>
+<h5 id="3层层次架构与3层客户端-服务器架构的比较"><a href="#3层层次架构与3层客户端-服务器架构的比较" class="headerlink" title="3层层次架构与3层客户端-服务器架构的比较"></a>3层层次架构与3层客户端-服务器架构的比较</h5><p><strong>三层层次架构（包括显示层，应用层与永久数据保持层）中的层指的是逻辑意义上的层</strong>。这些层，可以部署在同一台计算机上，当然也可以部署在不同的计算机上。</p>
+<p><strong>三层客户端-服务器架构里面所涉及的层指的是物理意义上的层。</strong></p>
+<ul>
+<li>客户端运行在PC上；</li>
+<li>应用层被部署与运行在应用服务器上；</li>
+<li>数据层包含数据库与数据库管理系统软件，被部署与运行在数据库服务器上。</li>
+</ul>
+<img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/Compare1.png" class="" title="Client Server">
+
+
+
+<h1 id="P2P-architecture"><a href="#P2P-architecture" class="headerlink" title="P2P architecture"></a>P2P architecture</h1><p>P2P使得任何的网络感知设备可以为另外一个网络感知设备提供服务；P2P网络的一个节点既是客户端，又是服务器；P2P计算通过直接交换的方式共享资源； </p>
+<h3 id="P2P架构的优点"><a href="#P2P架构的优点" class="headerlink" title="P2P架构的优点"></a>P2P架构的优点</h3><p>①便宜的设备协作、利用集体力量</p>
+<p>②节点既是客户端又是服务器；</p>
+<p>③无传统意义下的服务器超载现象；</p>
+<h5 id="第一代非结构化P2P架构-带有检索服务器"><a href="#第一代非结构化P2P架构-带有检索服务器" class="headerlink" title="第一代非结构化P2P架构-带有检索服务器"></a>第一代非结构化P2P架构-带有检索服务器</h5><img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/P2Pwithdirectoryserver.png" class="" title="P2P Architecture with directory server">
+
+<h5 id="第二代非结构化P2P架构-纯P2P架构"><a href="#第二代非结构化P2P架构-纯P2P架构" class="headerlink" title="第二代非结构化P2P架构-纯P2P架构"></a>第二代非结构化P2P架构-纯P2P架构</h5><img src="/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/PureP2P.png" class="" title="Pure P2P architecture">
+
+<h5 id="纯P2P架构的性质"><a href="#纯P2P架构的性质" class="headerlink" title="纯P2P架构的性质"></a>纯P2P架构的性质</h5><ul>
+<li><strong>节点既是客户端又是服务器</strong></li>
+<li><strong>没有中心服务器</strong></li>
+<li><strong>两种路由结构</strong>：①分布式目录； ②直接发送消息；</li>
+</ul>
+<p>第三代P2P架构-非结构层次化P2P架构</p>
+<h1 id="Grid-Computing"><a href="#Grid-Computing" class="headerlink" title="Grid Computing"></a>Grid Computing</h1><h1 id="SOA-and-Web-Services"><a href="#SOA-and-Web-Services" class="headerlink" title="SOA and Web Services"></a>SOA and Web Services</h1>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/" data-id="ckvrs8kbr0004rkvndy4l7jmg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/07/DataflowSystemsAndBatchSequentialArchitecture/" data-id="ckvtgzdif0003fwvn5glagpyw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -416,9 +602,9 @@
 
 
   
-    <article id="post-AdapterPatternAndSomethingElse" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-AdapterPattern" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/11/07/AdapterPatternAndSomethingElse/" class="article-date">
+    <a href="/2021/11/07/AdapterPattern/" class="article-date">
   <time datetime="2021-11-07T12:07:23.000Z" itemprop="datePublished">2021-11-07</time>
 </a>
     
@@ -430,7 +616,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/07/AdapterPatternAndSomethingElse/">AdapterPatternAndSomethingElse</a>
+      <a class="article-title" href="/2021/11/07/AdapterPattern/">AdapterPattern</a>
     </h1>
   
 
@@ -448,19 +634,11 @@
 </ul>
 <h4 id="四、两种适配器的不同点"><a href="#四、两种适配器的不同点" class="headerlink" title="四、两种适配器的不同点"></a>四、两种适配器的不同点</h4><p><u>在类适配器中，被适配类中所有的属性和方法都是被继承来的。</u></p>
 <p><u>在对象适配器中，被适配类中往往只是选择一个或者是几个方法放入适配器类中</u></p>
-<h1 id="Lect3-MainProgram-subroutine-OOSystem"><a href="#Lect3-MainProgram-subroutine-OOSystem" class="headerlink" title="Lect3_MainProgram_subroutine-OOSystem"></a><strong>Lect3_MainProgram_subroutine-OOSystem</strong></h1><p><strong>主程序-子程序系统以及面向对象系统</strong></p>
-<h4 id="一、面向对象设计"><a href="#一、面向对象设计" class="headerlink" title="一、面向对象设计"></a>一、面向对象设计</h4><p><strong>面向对象设计的原理：基于信息隐藏</strong></p>
-<h5 id="①什么叫做对象？包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。"><a href="#①什么叫做对象？包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。" class="headerlink" title="①什么叫做对象？包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。"></a>①什么叫做对象？包含状态（如，包含数据）以及语义（如，改变数据的规则）的事物。</h5><h5 id="②面相对象的基本概念：对象被用于统一算法抽象和数据抽象的思想。"><a href="#②面相对象的基本概念：对象被用于统一算法抽象和数据抽象的思想。" class="headerlink" title="②面相对象的基本概念：对象被用于统一算法抽象和数据抽象的思想。"></a>②面相对象的基本概念：对象被用于统一算法抽象和数据抽象的思想。</h5><p><strong>③面向对象设计的性质：封装、继承、动态绑定以及复用和维护。</strong></p>
-<p>④<strong>面向对象设计的优点：</strong></p>
-<p><strong>a) 程序容易维护(Easier maintenance)。由于对象对其客户程序隐藏其表示，因此可以在不影响客户程序的情况下改变实现。对象可以理解为独立实体；</strong></p>
-<p><strong>b) 对象是可复用的组件(Reusable)；</strong></p>
-<p><strong>c) 在一些系统中，对象是现实现实世界的映射；</strong></p>
-<p><strong>d) 容易分解系统(Easy decomposition of a system) 对象将一组可访问的方法与其操作的数据捆绑在一起，允许设计人员将问题分解为互相交互的对象的集合。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/07/AdapterPatternAndSomethingElse/" data-id="ckvrs8kbo0001rkvnbz1185bm" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/07/AdapterPattern/" data-id="ckvtgzdic0001fwvngfzgbn26" class="article-share-link">Share</a>
       
       
     </footer>
@@ -497,7 +675,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/07/AbstractFactory/" data-id="ckvrs8kbj0000rkvnbvzt5hq1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/07/AbstractFactory/" data-id="ckvtgzdi80000fwvn8bkq0mww" class="article-share-link">Share</a>
       
       
     </footer>
@@ -555,7 +733,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/06/MVCArchitecture/" data-id="ckvrs8kbu0008rkvngyysgrd6" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/06/MVCArchitecture/" data-id="ckvtgzdii0007fwvn16q938h3" class="article-share-link">Share</a>
       
       
     </footer>
